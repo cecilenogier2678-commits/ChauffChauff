@@ -1,0 +1,120 @@
+.calendar-card {
+    grid-column: span 4;
+    display: flex;
+    flex-direction: column;
+    min-height: 280px;
+}
+
+.calendar-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 24px;
+}
+
+.card-title-light {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--text-light);
+}
+
+.month-selector {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 0.9rem;
+    color: #adb0b8;
+    cursor: pointer;
+    padding: 6px 12px;
+    border-radius: var(--radius-full);
+    background-color: rgba(255, 255, 255, 0.05);
+    transition: background-color 0.2s;
+}
+
+.month-selector:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.calendar-grid {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.weekdays {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    margin-bottom: 12px;
+}
+
+.weekday {
+    text-align: center;
+    font-size: 0.8rem;
+    color: #8c8f96;
+    font-weight: 500;
+}
+
+.dates {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 4px;
+}
+
+.date {
+    aspect-ratio: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.9rem;
+    border-radius: 50%;
+    color: #adb0b8;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.date:hover:not(.date-today) {
+    background-color: rgba(255, 255, 255, 0.1);
+    color: #fff;
+}
+
+.date-today {
+    background-color: transparent;
+    color: var(--text-light);
+    border: 1px solid rgba(255, 255, 255, 0.4);
+}
+
+.date-completed {
+    background-color: rgba(241, 207, 99, 0.2);
+    color: var(--accent-color);
+}
+
+.date-planned {
+    background-color: rgba(255, 255, 255, 0.15);
+    color: #fff;
+}
+
+.date-urgent {
+    background-color: rgba(235, 122, 102, 0.2);
+    color: var(--accent-coral);
+}
+
+.calendar-legend {
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 16px;
+    row-gap: 8px;
+    margin-top: 24px;
+    font-size: 0.8rem;
+}
+
+.dot-today {
+    border: 1px solid rgba(255, 255, 255, 0.4);
+}
+
+.dot-completed-light {
+    background: var(--accent-color);
+}
+
+.dot-planned-light {
+    background: rgba(255, 255, 255, 0.3);
+}

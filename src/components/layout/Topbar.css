@@ -1,0 +1,86 @@
+.topbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-bottom: 24px;
+    padding-top: 16px;
+}
+
+.topbar-welcome h1 {
+    font-size: 2rem;
+    font-weight: 600;
+    color: var(--text-dark);
+    letter-spacing: -0.03em;
+    margin-bottom: 4px;
+}
+
+.topbar-welcome p {
+    color: var(--text-gray);
+    font-size: 0.95rem;
+    font-weight: 500;
+}
+
+.topbar-actions {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.search-bar {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.search-icon {
+    position: absolute;
+    left: 16px;
+    color: var(--text-gray);
+}
+
+.search-bar input {
+    width: 400px;
+    height: 48px;
+    border-radius: var(--radius-full);
+    border: 1px solid transparent;
+    background-color: var(--card-bg-light);
+    padding: 0 20px 0 46px;
+    font-family: inherit;
+    font-size: 0.9rem;
+    color: var(--text-dark);
+    box-shadow: var(--shadow-soft);
+    transition: all 0.2s ease;
+    outline: none;
+}
+
+.search-bar input::placeholder {
+    color: #adb0b8;
+}
+
+.search-bar input:focus {
+    border-color: rgba(241, 207, 99, 0.5);
+    /* Soft yellow border */
+    box-shadow: 0 0 0 4px rgba(241, 207, 99, 0.1);
+}
+
+.cta-button {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background-color: var(--card-bg);
+    color: var(--text-light);
+    height: 48px;
+    padding: 0 24px;
+    border-radius: var(--radius-full);
+    font-size: 0.95rem;
+    font-weight: 600;
+    box-shadow: var(--shadow-soft);
+    transition: all 0.2s ease;
+}
+
+.cta-button:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-medium);
+    background-color: #2c303a;
+    /* Slightly lighter charcoal */
+}

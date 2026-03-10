@@ -1,0 +1,34 @@
+.app-container {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  gap: 28px;
+}
+
+.main-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+  height: 100%;
+  overflow-y: auto;
+  padding-right: 8px;
+  /* For scrollbar */
+}
+
+/* Hide scrollbar for clean look */
+.main-content::-webkit-scrollbar {
+  width: 6px;
+}
+
+.main-content::-webkit-scrollbar-thumb {
+  background: rgba(0, 0, 0, 0.1);
+  border-radius: var(--radius-full);
+}
+
+.dashboard-grid {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: auto auto auto;
+  gap: 24px;
+}
